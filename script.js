@@ -8,38 +8,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         const data = await response.json();
         
         // Populate all sections
-        populateTopContact(data.contact);
         populateHero(data.hero);
         populateTutor(data.tutor);
         populateCourses(data.courses);
         populateTestimonials(data.testimonials);
-        populateContact(data.contact);
+        populateContact(data.contact, data.social);
         populateSocial(data.social);
         populateFooter(data.footer);
-        populateCourseOptions(data.courses);
         
     } catch (error) {
         console.error('Error loading data:', error);
         showErrorMessage();
     }
 });
-
-// Top Contact Bar
-function populateTopContact(contact) {
-    const topEmail = document.getElementById('top-contact-email');
-    const topPhone = document.getElementById('top-contact-phone');
-    
-    if (topEmail) {
-        topEmail.href = `mailto:${contact.email}`;
-        topEmail.querySelector('span').textContent = contact.email;
-    }
-    
-    if (topPhone) {
-        topPhone.href = `tel:${contact.phone.replace(/\s/g, '')}`;
-        topPhone.querySelector('span').textContent = contact.phone;
-    }
-}
-
 // Hero Section
 function populateHero(hero) {
     document.getElementById('hero-headline').textContent = hero.headline;
@@ -54,12 +35,34 @@ function populateHero(hero) {
 function populateTutor(tutor) {
     document.getElementById('tutor-bio').textContent = tutor.bio;
     
-    const photo = document.getElementById('tutor-photo');
-    photo.src = tutor.photo;
-    photo.alt = `${tutor.name} - German Language Tutor`;
-    photo.onerror = () => {
-        photo.src = 'https://via.placeholder.com/400x500?text=Your+Photo';
-    };
+    // Handle photo carousel
+    const carouselTrack = document.getElementById('carousel-track');
+    const carouselIndicators = document.getElementById('carousel-indicators');
+    
+    // Check if photo is an array or single value
+    const photos = Array.isArray(tutor.photo) ? tutor.photo : [tutor.photo];
+    
+    // Populate carousel with photos
+    carouselTrack.innerHTML = photos.map((photoUrl, index) => `
+        <div class="w-full flex-shrink-0">
+            <img src="${photoUrl}" 
+                 alt="${tutor.name} - German Language Tutor - Photo ${index + 1}" 
+                 class="w-full h-auto object-cover"
+                 onerror="this.src='https://via.placeholder.com/400x500?text=Your+Photo'">
+        </div>
+    `).join('');
+    
+    // Populate indicators
+    carouselIndicators.innerHTML = photos.map((_, index) => `
+        <button class="carousel-indicator w-2 h-2 rounded-full transition-all duration-300 ${index === 0 ? 'bg-white w-6' : 'bg-white/50'}" 
+                data-index="${index}" 
+                aria-label="Go to photo ${index + 1}"></button>
+    `).join('');
+    
+    // Initialize carousel auto-scroll
+    if (photos.length > 1) {
+        initCarousel(photos.length);
+    }
     
     const certificationsList = document.getElementById('tutor-certifications');
     certificationsList.innerHTML = tutor.certifications.map(cert => `
@@ -70,6 +73,67 @@ function populateTutor(tutor) {
             <span class="text-gray-700">${cert}</span>
         </li>
     `).join('');
+}
+
+// Carousel functionality
+let carouselInterval;
+let currentSlide = 0;
+
+function initCarousel(totalSlides) {
+    const track = document.getElementById('carousel-track');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    
+    // Auto-scroll every 4 seconds
+    carouselInterval = setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel(totalSlides);
+    }, 2500);
+    
+    // Add click handlers to indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentSlide = index;
+            updateCarousel(totalSlides);
+            // Reset auto-scroll timer
+            clearInterval(carouselInterval);
+            carouselInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel(totalSlides);
+            }, 4000);
+        });
+    });
+    
+    // Pause on hover
+    const carousel = document.getElementById('tutor-photo-carousel');
+    carousel.addEventListener('mouseenter', () => {
+        clearInterval(carouselInterval);
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+        carouselInterval = setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel(totalSlides);
+        }, 4000);
+    });
+}
+
+function updateCarousel(totalSlides) {
+    const track = document.getElementById('carousel-track');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    
+    // Move carousel
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Update indicators
+    indicators.forEach((indicator, index) => {
+        if (index === currentSlide) {
+            indicator.classList.remove('bg-white/50', 'w-2');
+            indicator.classList.add('bg-white', 'w-6');
+        } else {
+            indicator.classList.remove('bg-white', 'w-6');
+            indicator.classList.add('bg-white/50', 'w-2');
+        }
+    });
 }
 
 // Courses Section (Main Highlight)
@@ -165,25 +229,31 @@ function populateTestimonials(testimonials) {
 }
 
 // Contact Section
-function populateContact(contact) {
+function populateContact(contact, social) {
     document.getElementById('contact-note').textContent = contact.availabilityNote;
-    document.getElementById('contact-email').textContent = contact.email;
-    document.getElementById('contact-email').href = `mailto:${contact.email}`;
-    document.getElementById('contact-phone').textContent = contact.phone;
-    document.getElementById('contact-phone').href = `tel:${contact.phone.replace(/\s/g, '')}`;
     
-    // Update form action
-    document.getElementById('contact-form').action = `mailto:${contact.email}`;
-}
-
-// Populate Course Options in Contact Form
-function populateCourseOptions(courses) {
-    const select = document.getElementById('course-interest');
-    const currentOptions = select.innerHTML;
+    // Email card
+    const emailCard = document.getElementById('contact-email-card');
+    emailCard.href = `mailto:${contact.email}`;
+    emailCard.querySelector('p').textContent = contact.email;
     
-    select.innerHTML = currentOptions + courses.map(course => `
-        <option value="${course.level}">${course.level}</option>
-    `).join('');
+    // WhatsApp card
+    const whatsappCard = document.getElementById('contact-whatsapp-card');
+    if (social && social.whatsapp) {
+        whatsappCard.href = social.whatsapp;
+    }
+    
+    // Instagram card
+    const instagramCard = document.getElementById('contact-instagram-card');
+    if (social && social.instagram) {
+        instagramCard.href = social.instagram;
+    }
+    
+    // YouTube card
+    const youtubeCard = document.getElementById('contact-youtube-card');
+    if (social && social.youtube) {
+        youtubeCard.href = social.youtube;
+    }
 }
 
 // Social Links

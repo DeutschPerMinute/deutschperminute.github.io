@@ -15,9 +15,9 @@
   },
   
   "tutor": {
-    "name": "Anna Schmidt",
-    "photo": "assets/profile.jpg",
-    "bio": "Hallo! I'm Anna, a certified German language instructor with over 8 years of experience teaching students from around the world. Born and raised in Munich, I combine traditional teaching methods with modern, interactive techniques to make learning German engaging and effective. Whether you're preparing for exams, relocating to Germany, or simply passionate about languages, I'm here to guide you every step of the way.",
+    "name": "Aqsa Perwez",
+    "photo": ["assets/profile-1.jpg", "assets/profile-2.jpg", "assets/profile-3.jpg"],
+    "bio": "Hallo! I'm Aqsa, a certified German language instructor with over 8 years of experience teaching students from around the world. Born and raised in Munich, I combine traditional teaching methods with modern, interactive techniques to make learning German engaging and effective. Whether you're preparing for exams, relocating to Germany, or simply passionate about languages, I'm here to guide you every step of the way.",
     "certifications": [
       "CELTA Certified",
       "Goethe Institute Trainer",
@@ -158,16 +158,13 @@
   ],
   
   "contact": {
-    "email": "hello@deutschperminute.com",
-    "phone": "+49 123 456 7890",
     "availabilityNote": "I typically respond within 24 hours. For urgent inquiries, please mention it in your message."
   },
   
   "social": {
-    "instagram": "https://instagram.com/deutschperminute",
-    "linkedin": "https://linkedin.com/in/annatutor",
+    "instagram": "https://www.instagram.com/deutsch.per.minute",
     "youtube": "https://youtube.com/@deutschperminute",
-    "whatsapp": "https://wa.me/491234567890"
+    "whatsapp": "https://wa.me/8171585066"
   },
   
   "footer": {
