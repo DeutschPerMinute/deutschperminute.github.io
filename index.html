@@ -50,8 +50,83 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Glassmorphism Navbar */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-item {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #FFCE00;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-item:hover::after,
+        .nav-item.active::after {
+            width: 100%;
+        }
+        
+        /* Hide navbar on scroll down, show on scroll up */
+        .nav-hidden {
+            transform: translateY(-100%);
+        }
+    </style>
 </head>
 <body class="font-sans antialiased bg-gray-50 text-gray-800">
+
+    <!-- Floating Glassmorphism Navbar -->
+    <nav id="navbar" class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 w-11/12 max-w-5xl glass-nav rounded-full px-6 py-3">
+        <div class="flex items-center justify-between">
+            <!-- Logo/Brand -->
+            <a href="#hero" class="nav-logo text-white font-bold text-lg hover:text-accent-gold transition">
+                Deutsch per Minute
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex items-center space-x-8">
+                <li><a href="#hero" class="nav-item nav-link text-white hover:text-accent-gold font-medium">Home</a></li>
+                <li><a href="#about" class="nav-item nav-link text-white hover:text-accent-gold font-medium">About</a></li>
+                <li><a href="#courses" class="nav-item nav-link text-white hover:text-accent-gold font-medium">Courses</a></li>
+                <li><a href="#testimonials" class="nav-item nav-link text-white hover:text-accent-gold font-medium">Testimonials</a></li>
+                <li><a href="#contact" class="nav-item bg-accent-gold hover:bg-yellow-500 text-gray-900 font-bold px-6 py-2 rounded-full transition">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden nav-menu-btn text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
+            <ul class="flex flex-col space-y-3">
+                <li><a href="#hero" class="block nav-link text-white hover:text-accent-gold font-medium transition">Home</a></li>
+                <li><a href="#about" class="block nav-link text-white hover:text-accent-gold font-medium transition">About</a></li>
+                <li><a href="#courses" class="block nav-link text-white hover:text-accent-gold font-medium transition">Courses</a></li>
+                <li><a href="#testimonials" class="block nav-link text-white hover:text-accent-gold font-medium transition">Testimonials</a></li>
+                <li><a href="#contact" class="block text-center bg-accent-gold hover:bg-yellow-500 text-gray-900 font-bold px-6 py-2 rounded-full transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <header id="hero" class="relative bg-gradient-to-b from-accent-black via-accent-red to-accent-gold text-white overflow-hidden">

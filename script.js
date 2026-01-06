@@ -294,3 +294,111 @@ function showErrorMessage() {
         </div>
     `;
 }
+
+// Navbar functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.getElementById('navbar');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelectorAll('.nav-item');
+    let lastScroll = 0;
+    
+    // Mobile menu toggle
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+    
+    // Scroll behavior - hide on scroll down, show on scroll up
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        const heroSection = document.getElementById('hero');
+        const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+        
+        // Change navbar color based on scroll position
+        const navLogo = document.querySelector('.nav-logo');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const menuBtn = document.querySelector('.nav-menu-btn');
+        
+        if (currentScroll > heroHeight - 100) {
+            // Past hero section - change to black
+            navLogo?.classList.remove('text-white');
+            navLogo?.classList.add('text-gray-900');
+            navLinks.forEach(link => {
+                link.classList.remove('text-white');
+                link.classList.add('text-gray-900');
+            });
+            menuBtn?.classList.remove('text-white');
+            menuBtn?.classList.add('text-gray-900');
+        } else {
+            // In hero section - keep white
+            navLogo?.classList.remove('text-gray-900');
+            navLogo?.classList.add('text-white');
+            navLinks.forEach(link => {
+                link.classList.remove('text-gray-900');
+                link.classList.add('text-white');
+            });
+            menuBtn?.classList.remove('text-gray-900');
+            menuBtn?.classList.add('text-white');
+        }
+        
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scrolling down
+                navbar.classList.add('nav-hidden');
+            } else {
+                // Scrolling up
+                navbar.classList.remove('nav-hidden');
+            }
+            lastScroll = currentScroll;
+        }, 100);
+        
+        // Update active nav item based on scroll position
+        updateActiveNavItem();
+    });
+    
+    // Update active navigation item
+    function updateActiveNavItem() {
+        const sections = document.querySelectorAll('section[id], header[id]');
+        const scrollPos = window.pageYOffset + 100;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const offsetTop = target.offsetTop - 100; // Account for navbar height
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
