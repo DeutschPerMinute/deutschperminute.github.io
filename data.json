@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "siteName": "Deutsch per Minute",
+    "tagline": "Master German at Your Own Pace",
+    "description": "Learn German with personalized courses from A1 to C1. Flexible online sessions tailored to your goals.",
+    "keywords": "German tutor, learn German online, German courses, A1 German, B1 German, language learning"
+  },
+  
+  "hero": {
+    "headline": "Learn German Fast, One Minute at a Time",
+    "subheadline": "Personalized online courses that fit your schedule. From complete beginner to advanced fluency.",
+    "ctaText": "Explore Courses",
+    "ctaLink": "#courses",
+    "backgroundImage": "assets/hero-bg.jpg"
+  },
+  
+  "tutor": {
+    "name": "Anna Schmidt",
+    "photo": "assets/profile.jpg",
+    "bio": "Hallo! I'm Anna, a certified German language instructor with over 8 years of experience teaching students from around the world. Born and raised in Munich, I combine traditional teaching methods with modern, interactive techniques to make learning German engaging and effective. Whether you're preparing for exams, relocating to Germany, or simply passionate about languages, I'm here to guide you every step of the way.",
+    "certifications": [
+      "CELTA Certified",
+      "Goethe Institute Trainer",
+      "MA in Applied Linguistics"
+    ]
+  },
+  
+  "courses": [
+    {
+      "id": 1,
+      "level": "A1 - Absolute Beginner",
+      "tagline": "Start Your German Journey",
+      "price": "€200",
+      "duration": "8 weeks",
+      "sessionsPerWeek": 2,
+      "sessionLength": "60 minutes",
+      "description": "Perfect for complete beginners. Learn basic vocabulary, pronunciation, and essential grammar to introduce yourself and handle everyday situations.",
+      "features": [
+        "16 live one-on-one sessions",
+        "Custom learning materials included",
+        "Weekly homework assignments",
+        "Certificate of completion",
+        "Lifetime access to course recordings"
+      ],
+      "badge": "Most Popular"
+    },
+    {
+      "id": 2,
+      "level": "A2 - Elementary",
+      "tagline": "Build Your Foundation",
+      "price": "€220",
+      "duration": "10 weeks",
+      "sessionsPerWeek": 2,
+      "sessionLength": "60 minutes",
+      "description": "Expand your vocabulary and grammar. Communicate in routine tasks and describe your background, immediate environment, and needs.",
+      "features": [
+        "20 live one-on-one sessions",
+        "Interactive exercises & worksheets",
+        "Speaking practice scenarios",
+        "Progress tracking dashboard",
+        "Email support between sessions"
+      ],
+      "badge": null
+    },
+    {
+      "id": 3,
+      "level": "B1 - Intermediate",
+      "tagline": "Achieve Independence",
+      "price": "€250",
+      "duration": "12 weeks",
+      "sessionsPerWeek": 2,
+      "sessionLength": "75 minutes",
+      "description": "Handle most situations while traveling in German-speaking countries. Produce simple connected text on familiar topics and discuss personal interests.",
+      "features": [
+        "24 live sessions (75 min each)",
+        "Real-world conversation practice",
+        "Grammar deep-dives",
+        "Exam preparation (Goethe B1)",
+        "Personalized feedback reports"
+      ],
+      "badge": "Best Value"
+    },
+    {
+      "id": 4,
+      "level": "B2 - Upper Intermediate",
+      "tagline": "Master Complex Topics",
+      "price": "€280",
+      "duration": "14 weeks",
+      "sessionsPerWeek": 2,
+      "sessionLength": "75 minutes",
+      "description": "Understand complex texts and interact fluently with native speakers. Express yourself on a wide range of topics with clarity and detail.",
+      "features": [
+        "28 live sessions (75 min each)",
+        "Business German module",
+        "Debate & presentation practice",
+        "Cultural immersion content",
+        "Priority scheduling"
+      ],
+      "badge": null
+    },
+    {
+      "id": 5,
+      "level": "C1 - Advanced",
+      "tagline": "Near-Native Fluency",
+      "price": "€320",
+      "duration": "16 weeks",
+      "sessionsPerWeek": 2,
+      "sessionLength": "90 minutes",
+      "description": "Express yourself fluently and spontaneously. Use German flexibly for social, academic, and professional purposes with precision.",
+      "features": [
+        "32 live sessions (90 min each)",
+        "Academic writing workshops",
+        "Industry-specific vocabulary",
+        "C1 exam preparation",
+        "Post-course mentorship (3 months)"
+      ],
+      "badge": null
+    }
+  ],
+  
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "course": "B1 - Intermediate",
+      "rating": 5,
+      "text": "Anna's teaching style is incredible! I went from struggling with basic sentences to having full conversations in just 12 weeks. Her patience and personalized approach made all the difference.",
+      "date": "December 2025",
+      "location": "London, UK"
+    },
+    {
+      "id": 2,
+      "name": "Carlos Mendez",
+      "course": "A1 - Absolute Beginner",
+      "rating": 5,
+      "text": "I had zero German knowledge before starting. Anna made learning fun and practical. The materials were top-notch, and I loved the flexible scheduling. Highly recommend!",
+      "date": "November 2025",
+      "location": "Madrid, Spain"
+    },
+    {
+      "id": 3,
+      "name": "Priya Sharma",
+      "course": "B2 - Upper Intermediate",
+      "rating": 5,
+      "text": "Preparing for my move to Berlin, I needed to reach B2 quickly. Anna's structured approach and real-world practice scenarios got me exam-ready. I passed with flying colors!",
+      "date": "October 2025",
+      "location": "Mumbai, India"
+    },
+    {
+      "id": 4,
+      "name": "Michael O'Brien",
+      "course": "C1 - Advanced",
+      "rating": 5,
+      "text": "As a business professional, I needed advanced German for work. Anna tailored the course to my industry needs. Her expertise in both language and culture is unmatched.",
+      "date": "September 2025",
+      "location": "Dublin, Ireland"
+    }
+  ],
+  
+  "contact": {
+    "email": "hello@deutschperminute.com",
+    "phone": "+49 123 456 7890",
+    "availabilityNote": "I typically respond within 24 hours. For urgent inquiries, please mention it in your message."
+  },
+  
+  "social": {
+    "instagram": "https://instagram.com/deutschperminute",
+    "linkedin": "https://linkedin.com/in/annatutor",
+    "youtube": "https://youtube.com/@deutschperminute",
+    "whatsapp": "https://wa.me/491234567890"
+  },
+  
+  "footer": {
+    "copyrightYear": 2026,
+    "copyrightText": "Deutsch per Minute. All rights reserved.",
+    "additionalLinks": [
+      { "text": "Privacy Policy", "url": "#privacy" },
+      { "text": "Terms of Service", "url": "#terms" }
+    ]
+  }
+}
