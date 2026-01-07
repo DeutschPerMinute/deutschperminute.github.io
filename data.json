@@ -7,8 +7,8 @@
   },
   
   "hero": {
-    "headline": "Learn German Fast, One Minute at a Time",
-    "subheadline": "Personalized online courses that fit your schedule. From complete beginner to advanced fluency.",
+    "headline": "Speak German with Clarity and Confidence",
+    "subheadline": "Structured online courses, flexible schedules, and clear guidance, so you can learn German with confidence",
     "ctaText": "Explore Courses",
     "ctaLink": "#courses",
     "backgroundImage": "assets/hero-bg.jpg"
@@ -16,103 +16,81 @@
   
   "tutor": {
     "name": "Aqsa Perwez",
-    "photo": ["assets/profile-1.jpg", "assets/profile-2.jpg", "assets/profile-3.jpg"],
-    "bio": "Hallo! I'm Aqsa, a certified German language instructor with over 8 years of experience teaching students from around the world. Born and raised in Munich, I combine traditional teaching methods with modern, interactive techniques to make learning German engaging and effective. Whether you're preparing for exams, relocating to Germany, or simply passionate about languages, I'm here to guide you every step of the way.",
+    "photo": ["assets/profile-2.jpg"],
+    "bio": "Hallo! I’m Aqsa, your German tutor (and yes, German grammar can make sense). I studied German at Jawaharlal Nehru University (JNU), New Delhi, and am currently pursuing my Master’s in German there. I am TestDaF certified and teach German up to C1 level concepts without unnecessary confusion or textbook overload. My classes are structured and interactive, focused on real progress like speaking with confidence, understanding grammar instead of memorizing it, and actually enjoying the process. I teach using an iPad based method with clear notes and explanations, because messy screenshots are not a learning strategy. If you are serious about learning German and slightly tired of overcomplicated explanations, you are in the right place.",
     "certifications": [
-      "CELTA Certified",
-      "Goethe Institute Trainer",
-      "MA in Applied Linguistics"
+      "TestDaF Certified",
+      "BA in German Language",
+      "MA in German Literature (contd..)"
     ]
   },
   
   "courses": [
     {
       "id": 1,
-      "level": "A1 - Absolute Beginner",
-      "tagline": "Start Your German Journey",
-      "price": "€200",
+      "level": "A1 + A2 - Elementary",
+      "tagline": "Build a strong foundation in German",
+      "price": "₹4999",
       "duration": "8 weeks",
-      "sessionsPerWeek": 2,
+      "sessionsPerWeek": "(2-3)",
       "sessionLength": "60 minutes",
-      "description": "Perfect for complete beginners. Learn basic vocabulary, pronunciation, and essential grammar to introduce yourself and handle everyday situations.",
+      "description": "Ideal for beginners who want a solid foundation in German. This course covers A1 and A2 levels and helps you move from basic sentences to everyday conversations with confidence.",
       "features": [
-        "16 live one-on-one sessions",
-        "Custom learning materials included",
+        "Live interactive classes",
+        "Complete A1 and A2 syllabus",
         "Weekly homework assignments",
-        "Certificate of completion",
-        "Lifetime access to course recordings"
+        "Speaking and listening practice"
       ],
       "badge": "Most Popular"
     },
     {
       "id": 2,
-      "level": "A2 - Elementary",
-      "tagline": "Build Your Foundation",
-      "price": "€220",
-      "duration": "10 weeks",
-      "sessionsPerWeek": 2,
+      "level": "A1 - Absolute Beginner ",
+      "tagline": "Start your German journey from scratch",
+      "price": "₹1999",
+      "duration": "4 weeks",
+      "sessionsPerWeek": "(2-3)",
       "sessionLength": "60 minutes",
-      "description": "Expand your vocabulary and grammar. Communicate in routine tasks and describe your background, immediate environment, and needs.",
+      "description": "Perfect for complete beginners with no prior knowledge of German. Learn basic vocabulary, pronunciation, and essential grammar to introduce yourself and handle simple everyday situations.",
       "features": [
-        "20 live one-on-one sessions",
-        "Interactive exercises & worksheets",
-        "Speaking practice scenarios",
-        "Progress tracking dashboard",
-        "Email support between sessions"
+        "Live interactive classes",
+        "Complete A1",
+        "Weekly homework assignments",
+        "Speaking and listening practice"
       ],
       "badge": null
     },
     {
       "id": 3,
-      "level": "B1 - Intermediate",
+      "level": "A1 + A2 + B1 - Intermediate",
       "tagline": "Achieve Independence",
-      "price": "€250",
-      "duration": "12 weeks",
-      "sessionsPerWeek": 2,
-      "sessionLength": "75 minutes",
-      "description": "Handle most situations while traveling in German-speaking countries. Produce simple connected text on familiar topics and discuss personal interests.",
+      "price": "₹9999",
+      "duration": "(12-14) weeks",
+      "sessionsPerWeek": "(2-3)",
+      "sessionLength": "1 hr 15 min",
+      "description": "HA complete course for serious learners who want to progress from beginner to intermediate level. Covers A1, A2, and B1 with structured guidance and consistent practice.",
       "features": [
-        "24 live sessions (75 min each)",
-        "Real-world conversation practice",
-        "Grammar deep-dives",
-        "Exam preparation (Goethe B1)",
-        "Personalized feedback reports"
+        "Live interactive classes",
+        "Complete A1 to B1",
+        "Weekly homework assignments",
+        "Speaking and listening practice"
       ],
       "badge": "Best Value"
     },
     {
       "id": 4,
-      "level": "B2 - Upper Intermediate",
-      "tagline": "Master Complex Topics",
-      "price": "€280",
-      "duration": "14 weeks",
-      "sessionsPerWeek": 2,
+      "level": "B1 - Intermediate",
+      "tagline": "Speak German with more confidence",
+      "price": "₹4999",
+      "duration": "6 weeks",
+      "sessionsPerWeek": "(2-3)",
       "sessionLength": "75 minutes",
-      "description": "Understand complex texts and interact fluently with native speakers. Express yourself on a wide range of topics with clarity and detail.",
+      "description": "Designed for learners who already know basic German and want to improve fluency. Focuses on speaking, sentence structure, and using German more naturally in real life.",
       "features": [
-        "28 live sessions (75 min each)",
-        "Business German module",
-        "Debate & presentation practice",
-        "Cultural immersion content",
-        "Priority scheduling"
-      ],
-      "badge": null
-    },
-    {
-      "id": 5,
-      "level": "C1 - Advanced",
-      "tagline": "Near-Native Fluency",
-      "price": "€320",
-      "duration": "16 weeks",
-      "sessionsPerWeek": 2,
-      "sessionLength": "90 minutes",
-      "description": "Express yourself fluently and spontaneously. Use German flexibly for social, academic, and professional purposes with precision.",
-      "features": [
-        "32 live sessions (90 min each)",
-        "Academic writing workshops",
-        "Industry-specific vocabulary",
-        "C1 exam preparation",
-        "Post-course mentorship (3 months)"
+        "Live interactive classes",
+        "Complete B1",
+        "Weekly homework assignments",
+        "Speaking and listening practice"
       ],
       "badge": null
     }
@@ -121,46 +99,46 @@
   "testimonials": [
     {
       "id": 1,
-      "name": "Sarah Johnson",
-      "course": "B1 - Intermediate",
+      "name": "Rohit Verma",
+      "course": "A1 - Absolute Beginner",
       "rating": 5,
-      "text": "Anna's teaching style is incredible! I went from struggling with basic sentences to having full conversations in just 12 weeks. Her patience and personalized approach made all the difference.",
+      "text": "I started with zero knowledge of German and was honestly scared of grammar. Aqsa explains concepts very clearly and patiently.",
       "date": "December 2025",
-      "location": "London, UK"
+      "location": "Pune, India"
     },
     {
       "id": 2,
-      "name": "Carlos Mendez",
-      "course": "A1 - Absolute Beginner",
+      "name": "Sneha Kulkarni",
+      "course": "A1+A2 - Elementary",
       "rating": 5,
-      "text": "I had zero German knowledge before starting. Anna made learning fun and practical. The materials were top-notch, and I loved the flexible scheduling. Highly recommend!",
+      "text": "I tried learning German earlier from YouTube but always got confused. Here, the concepts were explained clearly and the regular speaking practice helped a lot. The iPad notes also made revision simple.",
       "date": "November 2025",
-      "location": "Madrid, Spain"
+      "location": "New Delhi, India"
     },
     {
       "id": 3,
-      "name": "Priya Sharma",
-      "course": "B2 - Upper Intermediate",
+      "name": "Sadiq Ali",
+      "course": "B1 - Intermediate",
       "rating": 5,
-      "text": "Preparing for my move to Berlin, I needed to reach B2 quickly. Anna's structured approach and real-world practice scenarios got me exam-ready. I passed with flying colors!",
-      "date": "October 2025",
-      "location": "Mumbai, India"
+      "text": "Preparing for my move to Dresden, I needed to reach B1 quickly. Aqsa's structured approach and practice scenarios got me job ready.",
+      "date": "May 2025",
+      "location": "Dresden, Germany"
     },
     {
       "id": 4,
-      "name": "Michael O'Brien",
-      "course": "C1 - Advanced",
+      "name": "Neha Sharma",
+      "course": "A1+A2+B1 - Intermediate",
       "rating": 5,
-      "text": "As a business professional, I needed advanced German for work. Anna tailored the course to my industry needs. Her expertise in both language and culture is unmatched.",
-      "date": "September 2025",
-      "location": "Dublin, Ireland"
+      "text": "I was preparing for the German language exam and needed clarity, not shortcuts. The classes helped me understand grammar properly and practise speaking in an exam oriented way. I passed the Goethe B1 exam, and the structured approach made preparation much less stressful.",
+      "date": "October 2025",
+      "location": "Bangalore, India"
     }
   ],
   
   "contact": {
     "email": "deutschperminute@gmail.com",
     "availabilityNote": "I typically respond within 24 hours. For urgent inquiries, please mention it in your message."
-  },
+},
   
   "social": {
     "instagram": "https://www.instagram.com/deutsch.per.minute",
