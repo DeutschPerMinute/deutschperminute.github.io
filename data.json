@@ -17,7 +17,7 @@
   "tutor": {
     "name": "Aqsa Perwez",
     "photo": ["assets/profile-2.jpg"],
-    "bio": "Hallo! I’m Aqsa, your German tutor (and yes, German grammar can make sense). I studied German at Jawaharlal Nehru University (JNU), New Delhi, and am currently pursuing my Master’s in German there. I am TestDaF certified and teach German up to C1 level concepts without unnecessary confusion or textbook overload. My classes are structured and interactive, focused on real progress like speaking with confidence, understanding grammar instead of memorizing it, and actually enjoying the process. I teach using an iPad based method with clear notes and explanations, because messy screenshots are not a learning strategy. If you are serious about learning German and slightly tired of overcomplicated explanations, you are in the right place.",
+    "bio": "Hallo! I’m Aqsa, your German tutor (and yes, German grammar can make sense). I studied German at Jawaharlal Nehru University (JNU), New Delhi, and am currently pursuing my Master’s in German. I am TestDaF certified and teach German up to C1 level with a clear and structured approach. My classes focus on speaking with confidence, understanding grammar instead of memorizing it, and learning in a way that actually makes sense. I use an iPad based teaching method with clear notes and explanations, so learning stays organized and effective.",
     "certifications": [
       "TestDaF Certified",
       "BA in German Language",
@@ -28,12 +28,12 @@
   "courses": [
     {
       "id": 1,
-      "level": "A1 + A2 - Elementary",
+      "level": "A1+A2 - Elementary",
       "tagline": "Build a strong foundation in German",
-      "price": "₹4999",
-      "duration": "8 weeks",
+      "price": "₹9999",
+      "duration": "(8-10) weeks",
       "sessionsPerWeek": "(2-3)",
-      "sessionLength": "60 minutes",
+      "sessionLength": "75 minutes",
       "description": "Ideal for beginners who want a solid foundation in German. This course covers A1 and A2 levels and helps you move from basic sentences to everyday conversations with confidence.",
       "features": [
         "Live interactive classes",
@@ -45,12 +45,12 @@
     },
     {
       "id": 2,
-      "level": "A1 - Absolute Beginner ",
+      "level": "A1 or A2 - Beginner ",
       "tagline": "Start your German journey from scratch",
-      "price": "₹1999",
-      "duration": "4 weeks",
+      "price": "₹5999",
+      "duration": "(4-5) weeks",
       "sessionsPerWeek": "(2-3)",
-      "sessionLength": "60 minutes",
+      "sessionLength": "75 minutes",
       "description": "Perfect for complete beginners with no prior knowledge of German. Learn basic vocabulary, pronunciation, and essential grammar to introduce yourself and handle simple everyday situations.",
       "features": [
         "Live interactive classes",
@@ -62,13 +62,13 @@
     },
     {
       "id": 3,
-      "level": "A1 + A2 + B1 - Intermediate",
+      "level": "A1+A2+B1 - Intermediate",
       "tagline": "Achieve Independence",
-      "price": "₹9999",
+      "price": "₹17,999",
       "duration": "(12-14) weeks",
       "sessionsPerWeek": "(2-3)",
-      "sessionLength": "1 hr 15 min",
-      "description": "HA complete course for serious learners who want to progress from beginner to intermediate level. Covers A1, A2, and B1 with structured guidance and consistent practice.",
+      "sessionLength": "75 minutes",
+      "description": "A complete course for serious learners who want to progress from beginner to intermediate level. Covers A1, A2, and B1 with structured guidance and consistent practice.",
       "features": [
         "Live interactive classes",
         "Complete A1 to B1",
@@ -81,7 +81,7 @@
       "id": 4,
       "level": "B1 - Intermediate",
       "tagline": "Speak German with more confidence",
-      "price": "₹4999",
+      "price": "₹9999",
       "duration": "6 weeks",
       "sessionsPerWeek": "(2-3)",
       "sessionLength": "75 minutes",
