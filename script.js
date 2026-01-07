@@ -276,7 +276,8 @@ function populateSocial(social) {
 
 // Footer
 function populateFooter(footer) {
-    document.getElementById('footer-copyright').textContent = `© ${footer.copyrightYear} ${footer.copyrightText}`;
+    const currentYear = new Date().getFullYear();
+    document.getElementById('footer-copyright').textContent = `© ${currentYear} ${footer.copyrightText}`;
     
     const linksContainer = document.getElementById('footer-links');
     linksContainer.innerHTML = footer.additionalLinks.map(link => `
